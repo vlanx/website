@@ -12,7 +12,7 @@ export const sharedPageComponents: SharedLayout = {
         // from data-repo
         repo: 'vlanx/website',
         // from data-repo-id
-        repoId: 'R_kgDOPXQP1w,
+        repoId: 'R_kgDOPXQP1w',
         // from data-category
         category: 'Announcements',
         // from data-category-id
