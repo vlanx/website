@@ -4,6 +4,7 @@ I like music and computers and that's it. I've finished my Master's Degree in Co
 - First paper: *Flexible Aether Slice Provisioning for 5G Enterprise Connected Edge* — [Link](https://ieeexplore.ieee.org/document/10329728)
 
 Since then I've been working at IT Aveiro, still within the 5G and cloud-native realm, while expanding my programming and orchestration knowledge in my free time with my **homelab** (more on that below).
+
 Check if out here: [[homelab]]
 #### **Preview**
 

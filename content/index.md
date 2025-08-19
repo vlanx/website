@@ -12,7 +12,7 @@ title: Tiago Barros
 - [[Operating System & Environment]]
 - [[Dotfiles - Neovim & Tmux]]
 ## Find me
-- GitHub [[]]: [vlanx](https://github.com/vlanx)
-- LinkedIn: [Tiago Barros](https://www.linkedin.com/in/tiago-barros-620208373/)
-- Email: tiagoambarros@icloud.com
-- Spotify: [Tiago Barros](https://open.spotify.com/user/1177699548)
+- ![[github.svg|20]] Github: [vlanx](https://github.com/vlanx)
+- ![[linkedin.svg|20]] LinkedIn: [Tiago Barros](https://www.linkedin.com/in/tiago-barros-620208373/)
+- ![[envelope.svg|20]] Email: tiagoambarros@icloud.com
+- ![[spotify.svg|20]] Spotify: [Tiago Barros](https://open.spotify.com/user/1177699548)
