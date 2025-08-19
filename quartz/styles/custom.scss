@@ -1,3 +1,15 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+/* quartz/styles/custom.scss */
+.icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: text-bottom; /* aligns with link text baseline */
+  margin-right: 8px;           /* space before the link text */
+  fill: currentColor;          /* <- key: icon follows text color */
+}
+
+/* If an icon uses strokes instead of fills */
+.icon [stroke] { stroke: currentColor; }
