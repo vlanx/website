@@ -1,5 +1,5 @@
 ---
-title:
+title: About Me
 ---
 I like music and computers and that's it. I've finished my Master's Degree in Computer Engineering at the **University of Aveiro**, where I did my master thesis and my first paper.
 
