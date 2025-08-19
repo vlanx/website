@@ -1,5 +1,6 @@
 ---
 title: Tiago Barros
+comments: "false"
 ---
 *Domain was cheap and hosting's free.*
 ## Contents

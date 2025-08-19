@@ -1,5 +1,6 @@
 ---
 title: Skills
+comments: "false"
 ---
 ## Programming
 - ![[python.svg|20]] Python
