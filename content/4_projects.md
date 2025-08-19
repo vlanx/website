@@ -1,3 +1,6 @@
+---
+title: Projects
+---
 ### Homelab *(10-2024 → present)*
 Repo: https://github.com/vlanx/homelab
 

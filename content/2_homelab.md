@@ -1,5 +1,8 @@
+---
+title: Homelab
+---
 #### Powered by: 
-- ![[proxmox.svg|20]]Proxmox
+- ![[proxmox.svg|20]] Proxmox
 - ![[nginx.svg|20]] NGINX
 - ![[pi.svg|20]] Raspberry Pi 4
 - ![[linux.svg|20]] Debian & Ubuntu

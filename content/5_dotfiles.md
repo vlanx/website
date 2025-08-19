@@ -1,3 +1,6 @@
+---
+title: Dotfiles - Neovim & Tmux
+---
 ![workspace](assets/ws.mp4)
 
 Repository: https://github.com/vlanx/dotfiles

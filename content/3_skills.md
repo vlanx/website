@@ -1,9 +1,12 @@
+---
+title: Skills
+---
 ## Programming
 - ![[python.svg|20]] Python
 - ![[go.svg|20]] Go
 - ![[gnubash.svg|20]] Shell (Bash)
 - ![[java.svg|20]] Java
-- ![[c.svg|20]] ![[cplusplus.svg|20]] C / C++
+- ![[cplusplus.svg|20]] C / C++
 
 ## Technologies and Stacks
 - ![[kubernetes.svg|20]] Kubernetes
@@ -19,7 +22,7 @@ I interact daily with open-source 5G cores — **SD-Core (Aether)**, **Free5GC**
 - ![[ansible.svg|20]]  Ansible 
 - ![[terraform.svg|20]]  Terraform
 - ![[openssl.svg|20]]  Certificates (I do a fair bit of TLS certificate management for via Cloudflare DNS and Lets Encrypt)
-- ![[chart.svg|20]]  Monitoring (Going deeper on Loki and Telegraf is my main goal.)
+- ![[chart.svg|20]]  Monitoring (Going deeper on Loki and Telegraf is my main goal)
 - ![[network.svg|20]]  Traefik (for cluster networking)
 - ![[podman.svg|20]]  Podman
 - ![[linuxcontainers.svg|20]]  LXC

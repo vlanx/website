@@ -2,15 +2,13 @@
 title: Tiago Barros
 ---
 *Domain was cheap and hosting's free.*
-
-![[assets/vlanx.png|200]]
 ## Contents
-- [[About Me]]
-- [[Homelab]]
-- [[Projects]]
-- [[Skills]]
-- [[Operating System & Environment]]
-- [[Dotfiles - Neovim & Tmux]]
+- [[1_about_me]]
+- [[2_homelab]]
+- [[4_projects]]
+- [[3_skills]]
+- [[6_os]]
+- [[5_dotfiles]]
 ## Find me
 - ![[github.svg|20]] Github: [vlanx](https://github.com/vlanx)
 - ![[linkedin.svg|20]] LinkedIn: [Tiago Barros](https://www.linkedin.com/in/tiago-barros-620208373/)
