@@ -1,5 +1,3 @@
-# Projects
-
 ### Homelab *(10-2024 → present)*
 Repo: https://github.com/vlanx/homelab
 
@@ -12,7 +10,7 @@ Repo: https://github.com/vlanx/etf_knapsack
 I wanted to calculate all the possibilities/combinations of Buy orders of the ETFs that I buy monthly given my investment budget. I want to keep some ETFs within certain weight ranges and this helps me manage that, since I won't buy every ETF every month.
 
 ---
-### Advent of Code — **Go** *(03-2024 → present)*
+### Advent of Code - **Go** *(03-2024 → present)*
 Repo: https://github.com/vlanx/advent_of_code_golang
 
 The meaning of project gets a bit stretched with this one, but it's basically my attempts at solving the various Advent of Code daily Christmas challenges throughout the years using Go. The purpose of this is to get me more familiar with Go, by trying to approach each daily challenge in a Go idiomatic way, rather than a leaderbord/competition focused way, as is usual with the AoC challenges.

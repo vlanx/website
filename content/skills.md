@@ -1,5 +1,3 @@
-# Skills
-
 ## Programming
 - Python
 - Go

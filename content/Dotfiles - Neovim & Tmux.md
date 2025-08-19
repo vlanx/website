@@ -1,5 +1,3 @@
-# Neovim & Tmux
-
 Repo: https://github.com/vlanx/dotfiles
 
 > Video preview: `assets/ws.mp4` (linking here for static site generators that don't auto-embed video).
