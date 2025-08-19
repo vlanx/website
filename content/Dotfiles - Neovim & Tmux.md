@@ -1,9 +1,8 @@
-Repo: https://github.com/vlanx/dotfiles
+![workspace](assets/ws.mp4)
 
-> Video preview: `assets/ws.mp4` (linking here for static site generators that don't auto-embed video).
+Repository: https://github.com/vlanx/dotfiles
 
 My setup includes LSP-powered autocomplete and docs preview, file browsing with Telescope.nvim, Git helpers, and more. See the repo above for the full plugin list.
-
 ## Notes
 - [Stripped-down remote setup](https://github.com/vlanx/remote) for remote development/management — clone and go.
 - No tiling window manager; I tile only the terminal, and **tmux** does the job.
