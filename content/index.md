@@ -5,7 +5,7 @@ comments: "false"
 *Domain was cheap and hosting's free.*
 ## Contents
 - [About Me](1_about_me)
-- [Homelab](2_homelab.md)
+- [Homelab](2_homelab.md) <- please do check it out
 - [Skills](3_skills)
 - [Projects](4_projects)
 - [Dotfiles](5_dotfiles)
