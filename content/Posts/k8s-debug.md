@@ -1,21 +1,87 @@
+---
+title: Are there no minimal Kubernetes debug pods?
+---
+
 # Are there no minimal Kubernetes debug pods?
 
 Or am I just not looking in the right places? Anyway I've created my own.
 
 Obviously I stumbled into [netshoot](https://github.com/nicolaka/netshoot), [network-multitool](https://github.com/Praqma/Network-MultiTool)(Outdated!) which now is from [WBITT](https://github.com/wbitt/Network-MultiTool) and also [doks-debug](https://github.com/digitalocean/doks-debug) from Digital Ocean.
 
-```bash
-╭─  in  ~/Github/website/content/Posts on   main ?1 at   devenv
-╰─❯ docker images
+![Docker Images](assets/dockerimages.png)
 
-IMAGE                                             ID             DISK USAGE   CONTENT SIZE   EXTRA
-alpine:3.23                                       25109184c71b       13.1MB         3.95MB
-ghcr.io/digitalocean-packages/doks-debug:latest   14ca91dd9567       1.55GB          367MB    U
-ghcr.io/vlanx/k8s-debug:latest                    df4ab98ee6ae       39.7MB         11.8MB
-nicolaka/netshoot:latest                          47b907d662d1        874MB          213MB    U
-wbitt/network-multitool:latest                    db2810fe2c8d        433MB         96.7MB
+
+But just look at the **size** of those things. I mean, network is fast and all but I don't like **bloat** just because. 
+
+Plus, it created an opportunity for me to build one tailored to my needs and made me mess around with **scheduled Github Actions Workflows**, which I didn't even knew existed.
+
+The Github Actions workflow right now uses **cron** to rebuild the image once per week, on every sunday. It also **rebuilds on commits** and via **dispatcher**. It really could not be simpler. The Dockerfile has the correct labels so it pins to the repo automatically and it tags it latest too.
+
+Since my goal was to have this container be a **drop-in tool to enter a kubernetes cluster** and look around and debug as if I was another pod, I had to make this workflow and troubleshooting sessions more **ergonomic**.
+
+Onto the interesting part:
+
+### kdbg Script
+
+Source is [here](https://github.com/vlanx/k8s-dbg/blob/main/kdbg.sh)!
+
+```bash title="kdbg.sh"
+╰─❯ kdbg -h
+Usage: kdbg [options]
+
+Options:
+  -n, --namespace NAME       Namespace for the debug pod.
+  -N, --node NAME            Pin the pod to a specific node.
+      --serviceaccount NAME  ServiceAccount name (default: default).
+      --privileged           Run the pod in privileged mode.
+      --host-network         Join the node network namespace.
+      --cmd 'COMMAND'        Run a one-shot command instead of an interactive shell.
+  -h, --help                 Show this help.
+
+Environment:
+  KDBG_IMAGE                 Image to run (default: ghcr.io/vlanx/k8s-debug:latest).
 ```
 
-But just look at the size of those things. I mean, network is fast and all but I don't like bloat just because. 
+Just a **bash wrapper function** around the calling of this debug container. It allows for namespace and node specification, along with an option to run a one-shot command. 
 
-Plus, it created an opportunity for me to create one tailored to my needs and made me mess with scheduled Github Actions Workflows, which I didn't even knew existed.
+### Example usage
+
+On a specific namespace and node:
+
+```bash
+kdbg --namespace kube-system --node some-node.dev
+```
+
+With elevated privileges:
+
+```bash
+kdbg --host-network --privileged --cmd 'tcpdump -ni any port 53'
+```
+
+Or, if you want to run this container by hand **without the helper script** I created:
+
+```bash
+# Open a shell in the default namespace
+kubectl run k8s-dbg-pod \
+  --namespace default \
+  --image ghcr.io/vlanx/k8s-dbg:latest \
+  --restart=Never \
+  --rm \
+  --attach \
+  -it \
+  --command -- /bin/sh
+```
+
+### Which tools are in the container
+
+Not a lot, just enough to be a usefull network-wise debug and troubleshoot. Plus, if I deem or someone recommends something that should be added, I'll be more than happy to consider it.
+
+- **`curl`** for HTTP(S) requests and service probing
+- **`bind-tools`** for DNS troubleshooting (`dig`, `nslookup`)
+- **`iproute2`** for inspecting interfaces, routes, and addresses
+- **`netcat-openbsd`** for simple TCP/UDP connectivity checks (`nc`)
+- **`jq`** for parsing JSON responses from APIs and service endpoints
+- **`tcpdump`** for packet capture when the pod is launched with sufficient privileges
+- **`busybox-extras`** plus the default Alpine / BusyBox userland
+
+The default shell is **`/bin/sh`**, as provided by Alpine.
