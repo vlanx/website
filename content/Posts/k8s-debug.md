@@ -2,8 +2,6 @@
 title: Are there no minimal Kubernetes debug pods?
 ---
 
-# Are there no minimal Kubernetes debug pods?
-
 Or am I just not looking in the right places? Anyway I've created my own.
 
 Obviously I stumbled into [netshoot](https://github.com/nicolaka/netshoot), [network-multitool](https://github.com/Praqma/Network-MultiTool)(Outdated!) which now is from [WBITT](https://github.com/wbitt/Network-MultiTool) and also [doks-debug](https://github.com/digitalocean/doks-debug) from Digital Ocean.
@@ -15,7 +13,7 @@ But just look at the **size** of those things. I mean, network is fast and all b
 
 Plus, it created an opportunity for me to build one tailored to my needs and made me mess around with **scheduled Github Actions Workflows**, which I didn't even knew existed.
 
-The Github Actions workflow right now uses **cron** to rebuild the image once per week, on every sunday. It also **rebuilds on commits** and via **dispatcher**. It really could not be simpler. The Dockerfile has the correct labels so it pins to the repo automatically and it tags it latest too.
+The Github Actions workflow right now uses **cron** to rebuild the image once per week, on **every sunday**. It also **rebuilds on commits** and via **dispatcher**. It really could not be simpler. The Dockerfile has the necessary labels to pin it to the repo automatically and it tags it with `latest` too.
 
 Since my goal was to have this container be a **drop-in tool to enter a kubernetes cluster** and look around and debug as if I was another pod, I had to make this workflow and troubleshooting sessions more **ergonomic**.
 
