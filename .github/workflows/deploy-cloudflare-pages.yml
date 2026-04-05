@@ -6,9 +6,9 @@ on:
       - main
   workflow_dispatch:
 
-# Use a custom theme for quartz from "https://github.com/saberzero1/quartz-themes?tab=readme-ov-file"
+# Use a custom theme for quartz from "https://github.com/saberzero1/quartz-themes"
 env:
-  THEME_NAME: material-gruvbox
+  THEME_NAME: obsidian-gruvbox
   
 permissions:
   contents: read
