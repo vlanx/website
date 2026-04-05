@@ -1,5 +1,14 @@
 ---
 title: Are there no minimal Kubernetes debug pods?
+description: A small Kubernetes debug pod and helper script for in-cluster troubleshooting, with curl, dig, tcpdump, and other essentials without the usual image bloat.
+tags:
+  - kubernetes
+  - debugging
+  - containers
+  - networking
+  - devops
+aliases:
+  - /Posts/k8s-debug
 ---
 
 Or am I just not looking in the right places? Anyway I've created my own.

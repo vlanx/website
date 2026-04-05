@@ -1,5 +1,14 @@
 ---
-title: Using lazydocker with remote Docker contexts.
+title: Using lazydocker with Remote Docker Contexts over SSH
+description: How to run lazydocker against remote Docker contexts over SSH by setting DOCKER_HOST, using SSH config aliases, and adding a small zsh helper for autocomplete.
+tags:
+  - docker
+  - lazydocker
+  - ssh
+  - zsh
+  - devops
+aliases:
+  - /Posts/lazydocker_remote
 ---
 
 I'm an immense fan of `lazygit` and I recommend you to [check it out](https://github.com/jesseduffield/lazygit). The very same author that did that wonderful tool also created `lazydocker`, which in the same vein as `lazygit`, provides a useful TUI to manage and observe more ergonomically your Docker containers and deployments.
