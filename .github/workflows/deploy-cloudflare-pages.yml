@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+# Use a custom theme for quartz from "https://github.com/saberzero1/quartz-themes?tab=readme-ov-file"
+env:
+  THEME_NAME: material-gruvbox
+  
 permissions:
   contents: read
   deployments: write
@@ -31,6 +35,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Fetch Quartz Theme
+        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
 
       - name: Build Quartz
         run: npx quartz build
