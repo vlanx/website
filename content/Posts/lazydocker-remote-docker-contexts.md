@@ -15,6 +15,8 @@ I'm an immense fan of `lazygit` and I recommend you to [check it out](https://gi
 
 This works out of the box for your local Docker installation and context, however, I don't usually use my own Docker context and I rely almost entirely on remote contexts.
 
+> macOS has `lazydocker` available through `Homebrew`. Linux (except Arch) has to either clone and install or install via `go install`. [Installation](https://github.com/jesseduffield/lazydocker#installation) 
+
 ## What are remote contexts? 
 
 In Docker, a **context** is a named configuration that tells the CLI which Docker daemon to talk to.
