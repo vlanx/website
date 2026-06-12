@@ -114,5 +114,4 @@ The `muttley` host is one that is on my job's infra and I'm connecting to it via
 
 ![Results](assets/se.png)
 
-You can see that it's barely noticeable. The extra System time is the cost of the extra process and pipe the wrapper sets up
-Very small price to pay in my opinion.
+You can see that it's barely noticeable. The extra System time is the cost of the extra process and pipe the wrapper sets up. Very small price to pay in my opinion.

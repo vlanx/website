@@ -94,3 +94,20 @@ lzd remote-context
 Notice that the line `compdef lzd=ssh` is what actually gives us the autocomplete engine from `ssh`.
 
 So very simple and ergonomic now.
+
+#### Tip:
+
+You might notice that doing operations on remote docker contexts via `ssh` might be throwing out some errors about reset connections:
+
+```bash
+remote host: stderr=kex_exchange_identification: read: Connection reset by peer
+```
+
+The fix is to simply have `ssh` multiplexing on your `ssh` config for all hosts; or scope it however you want it to:
+
+```sshconfig
+Host *
+  ControlMaster   auto
+  ControlPath     ~/.ssh/control-%C
+  ControlPersist  yes
+```
