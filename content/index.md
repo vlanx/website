@@ -6,7 +6,7 @@ comments: "false"
 ## Contents
 - [About Me](1_about_me)
 - [Posts](/Posts/)
-- [Homelab](2_homelab.md) <- please do check it out
+- [Homelab](2_homelab.md)
 - [Skills](3_skills)
 - [Projects](4_projects)
 - [Dotfiles](5_dotfiles)
